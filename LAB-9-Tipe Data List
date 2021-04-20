@@ -1,0 +1,30 @@
+# 71200595 Gerry Sunjay Junjung
+def minmax():
+    banyak = int(input('Mau hitung berapa angka ? '))
+    listkosong = []
+    for i in range(banyak):
+        masuk = int(input('Masukkan angka : '))
+        listkosong.append(masuk)
+    minim = int(min(listkosong))
+    maxi = int(max(listkosong))
+
+    jumlah = 0
+    jumlah1 = 0
+    # Nilai Tengah
+    for i in range (banyak) :
+        if  listkosong[i] == maxi :
+            jumlah += 0
+        elif  listkosong[i] == minim :
+            jumlah += 0
+        else : 
+            jumlah += listkosong[i]
+    # Nilai Rata-rata
+    for i in range(banyak):
+        jumlah1 += listkosong[i]
+        jumlah2 = jumlah1/banyak
+
+    print('Nilai terbesar dari list : ',maxi)
+    print('Nilai terkecil dari list : ',minim)
+    print('Hasil perhitungan tengah dari',listkosong,'yaitu :',jumlah)
+    print('Rata-rata dari ',banyak,' buah angka yang anda masukkan adalah : ',jumlah2)
+minmax()
